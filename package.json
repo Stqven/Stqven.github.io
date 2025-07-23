@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
-    "deploy": "next build && next export && touch out/.nojekyll && git add out && git commit -m 'update gh-pages' && git subtree push --prefix out origin gh-pages"
+    "start": "next start",
+    "lint": "next lint"
   },
   "author": {
     "name": "Sanidhya Kumar Verma",
@@ -59,7 +59,7 @@
     "type": "git",
     "url": "https://github.com/sanidhyy/next-portfolio.git"
   },
-  "homepage": "https://github.com/Stqven/Stqven.github.io",
+  "homepage": "https://github.com/sanidhyy/next-portfolio#readme",
   "bugs": {
     "url": "https://github.com/sanidhyy/next-portfolio/issues",
     "email": "sanidhya.verma12345@gmail.com"
