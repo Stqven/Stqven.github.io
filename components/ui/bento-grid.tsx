@@ -10,7 +10,11 @@ import { techStack } from "@/data";
 import animationData from "@/data/confetti.json";
 import { cn } from "@/lib/utils";
 
-import { BackgroundGradientAnimation } from "./background-gradient-animation";
+import dynamic from "next/dynamic";
+const BackgroundGradientAnimation = dynamic(
+  () => import("./background-gradient-animation").then(mod => mod.BackgroundGradientAnimation),
+  { ssr: false }
+);
 import { MagicButton } from "./magic-button";
 
 import { GridGlobe } from "../grid-globe";
@@ -112,7 +116,7 @@ export const BentoGridItem = ({
           )}
         </div>
 
-        {id === 6 && <BackgroundGradientAnimation />}
+        {id === 6 && typeof window !== "undefined" && <BackgroundGradientAnimation />}
 
         <div
           className={cn(
