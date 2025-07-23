@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // enables `next export`
-  basePath: "/Stqven.github.io",
-  assetPrefix: "/Stqven.github.io/",
+    output: 'export',
 };
 
-module.exports = nextConfig;
+export default nextConfig;
